@@ -1,3 +1,4 @@
+
 #一个保存了固定字典和大小的简单查找表。这个模块常用来保存词嵌入和用下标检索它们。
 # 模块的输入是一个下标的列表，输出是对应的词嵌入。相当于随机生成了一个tensor，可以把它看作一个查询表，其size为[num_embeddings，embedding_dim] 。
 torch.nn.Embedding
