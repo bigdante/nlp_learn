@@ -1,0 +1,46 @@
+
+
+刘潇：10.42.83.19
+scp -r xll/ liuxiao@kdd-3:/workspace
+咏霖：120.92.108.162
+
+训练：
+sh dpr_scripts/run_train_dpr_multidata.sh
+sh dpr_scripts/run_train_dpr_multidata_adapter.sh 
+测试：
+sh beir_scripts/eval_multidata_adapter.sh
+sh beir_scripts/eval_multidata_bitfit.sh cqadupstack/  
+nvidia-smi
+
+
+ssh -fN -L 23333:10.42.83.19:22 kdd-3
+ssh -fN -L 23334:10.42.59.52:22 kdd-4
+
+base安装记录：Cython ，faiss-gpu , adapter-transformers, beir
+-i http://pypi.douban.com/simple/
+pip install protobuf==0.23.1  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+pip install tensorflow-io-gcs-filesystem==0.23.1  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+
+pip install gast==0.4.0  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+
+pip install google-auth-oauthlib==0.4.6  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+tensorboard ==2.8.0
+
+-i https://mirrors.tuna.tsinghua.edu.cn/
+
+kill -STOP ${P} 停止进程
+kill -CONT ${P} 继续进程
+
+代码记录：1.28 修改了adapter的参数，进行2个模型的训练，没有config的模型效果极差
+        # model.add_adapter("adapter",config="houlsby")
+        model.add_adapter("adapter",config="pfeiffer")
+
+export LD_LIBRARY_PATH="/opt/conda/lib:$LD_LIBRARY_PATH"
+
+pv1 prefix.py hf_model option run.sh train.py
+
+菜鸟日志：
+1.刘潇解决了kdd-1的环境配置问题，bashrc
+2.咏霖解决了beir无法在kdd-n机器上的问题
+3.单卡单卡
+4.
