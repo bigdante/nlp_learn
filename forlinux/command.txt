@@ -31,16 +31,7 @@ tensorboard ==2.8.0
 kill -STOP ${P} 停止进程
 kill -CONT ${P} 继续进程
 
-代码记录：1.28 修改了adapter的参数，进行2个模型的训练，没有config的模型效果极差
-        # model.add_adapter("adapter",config="houlsby")
-        model.add_adapter("adapter",config="pfeiffer")
 
 export LD_LIBRARY_PATH="/opt/conda/lib:$LD_LIBRARY_PATH"
 
-pv1 prefix.py hf_model option run.sh train.py
 
-菜鸟日志：
-1.刘潇解决了kdd-1的环境配置问题，bashrc
-2.咏霖解决了beir无法在kdd-n机器上的问题
-3.单卡单卡
-4.
