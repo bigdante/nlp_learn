@@ -16,8 +16,6 @@ make && make install
 export PATH=/usr/local/tmux/bin:$PATH
 source ~/.bashrc
 
-![img.png](img.png)
-
 2.tmux命令的一些应用
 tmux new　　创建默认名称的会话
 tmux new -s mysession　　创建名为mysession的会话
