@@ -1,5 +1,0 @@
-tmux new -s
-tmux a -t bitfit
-tmux a -t dragon
-tmux kill-session -t <session-name>
-
