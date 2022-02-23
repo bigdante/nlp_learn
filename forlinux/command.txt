@@ -1,8 +1,8 @@
 
 
-刘潇：10.42.83.19
+
 scp -r xll/ liuxiao@kdd-3:/workspace
-咏霖：120.92.108.162
+
 
 训练：
 sh dpr_scripts/run_train_dpr_multidata.sh
