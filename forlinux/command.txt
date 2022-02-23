@@ -1,18 +1,4 @@
 
-
-
-scp -r xll/ liuxiao@kdd-3:/workspace
-
-
-训练：
-sh dpr_scripts/run_train_dpr_multidata.sh
-sh dpr_scripts/run_train_dpr_multidata_adapter.sh 
-测试：
-sh beir_scripts/eval_multidata_adapter.sh
-sh beir_scripts/eval_multidata_bitfit.sh cqadupstack/  
-nvidia-smi
-
-
 ssh -fN -L 23333:10.42.83.19:22 kdd-3
 ssh -fN -L 23334:10.42.59.52:22 kdd-4
 
