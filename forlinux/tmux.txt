@@ -30,6 +30,7 @@ tmux kill-server　　关闭所有会话
 tmux list-key　　列出所有绑定的键，等同于prefix ?
 tmux list-command　　列出所有命令
 
+如果要切分成多个窗口，可以通过如下的命令。
 Ctrl+b "　　水平分割当前窗格
 Ctrl+b %　　垂直分割当前窗格
 Ctrl+b x　　删除当前窗格
