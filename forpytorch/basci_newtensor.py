@@ -1,5 +1,3 @@
-#basci tensor operations
-
 import torch
 
 print(torch.__version__)
