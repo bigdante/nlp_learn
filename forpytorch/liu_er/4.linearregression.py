@@ -21,11 +21,12 @@ class LinearModel(torch.nn.Module):
         # (1,1)是指输入x和输出y的特征维度，这里数据集中的x和y的特征都是1维的
         # 该线性层需要学习的参数是w和b  获取w/b的方式分别是~linear.weight/linear.bias
         # infeature and outfeature
-        self.linear = torch.nn.Linear(1, 1,bias=True)
+        self.linear = torch.nn.Linear(1, 1, bias=True)
 
     def forward(self, x):
         y_pred = self.linear(x)
         return y_pred
+
 
 model = LinearModel()
 
@@ -51,7 +52,7 @@ x_test = torch.tensor([[4.0]])
 y_test = model(x_test)
 print('y_pred = ', y_test.data)
 
-# PyTorch
+# 第二种方法，更加规范些
 import torch
 from torch import nn
 from torch import optim
@@ -87,6 +88,4 @@ for epoch in range(num_epochs):
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-    print('第{}轮, loss为{:.8f}'.format(epoch+1, float(loss.data)))
-
-
+    print('第{}轮, loss为{:.8f}'.format(epoch + 1, float(loss.data)))
