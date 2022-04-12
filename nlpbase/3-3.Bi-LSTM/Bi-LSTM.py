@@ -42,6 +42,7 @@ class BiLSTM(nn.Module):
 if __name__ == '__main__':
     n_hidden = 5 # number of hidden units in one cell
 
+
     sentence = (
         'Lorem ipsum dolor sit amet consectetur adipisicing elit '
         'sed do eiusmod tempor incididunt ut labore et dolore magna '
